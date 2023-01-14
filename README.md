@@ -2,7 +2,7 @@
 ScrN Balance mutator for **Unreal Gold v227i+**.
 Modifies weapons and items for the singleplayer campaign to achieve better balance and improve QoL.
 
-# Summary
+# Feature Summary
 - **Dispersion Pistol**: more consistent upgrades and faster recharge rate.
 - **AutoMag**: manual reload option; slight damage nerf.
 - **Stinger**: damage buff and total ammo increase.
@@ -10,6 +10,49 @@ Modifies weapons and items for the singleplayer campaign to achieve better balan
 - **Eightball**: primary fire QoL improvement and Quake-style rocket jumping.
 - **Minigun**: total ammo increase.
 - **Flare**: longer duration.
+
+# Install
+Unzip ScrnUBalance.* files into "Unreal Gold/System" directory. Edit *ScrnUBalance.ini* if needed.
+
+# Configure
+You can disable individual weapon balance by editing the *ScrnUBalance.ini* config. Simply change the respective option from `True` to `False`:
+```ini
+[ScrnUBalance.ScrnUBalanceMut]
+bPistol=True
+bAutoMag=True
+bStinger=True
+bASMD=True
+bEightBall=True
+bMinigun=True
+bFlare=True
+```
+
+> **WARNING!** Changing the config requires a new game to start from the beginning. Changing the config in the middle of the playthrough may lead to undefined behavior!
+
+# Play
+## Starting a New Game
+It is recommended to start a new game with ScrN Balance mutator.
+1. Select *Game* / *New* in the main menu.
+2. Select the campaign (Unreal or RTNP) and difficulty (skill level).
+3. Check "Use Mutators"
+4. Click the *Mutators* button.
+5. In the "Configure Mutators" window, make sure that "ScrN Balance" is on the right side of the window - in the "Mutators Used" list. If not, drag it from the left list to the right.
+6. Close the mutators window and click OK in the "New Game" window to start a new game with ScrN Balance mutator.
+
+You can check if the ScrN Balance is working in the very first room - there is a flare on the upper floor. Pick the flare and and select it in the inventory. Check the console - it should say "Flare SE selected" ("SE" stands for "ScrN Edition"). Also yu may use the flare - SE version lasts for 30 seconds instead of the standard 10.
+
+## Uprading an Existing Game
+Despite the recommendation to start a new game with the ScrN Balance mutator, the other option is to upgrade the existing save game.
+1. Load the save file.
+2. Type the following command in the console:
+   `summon ScrnUBalance.ScrnUpgrade`
+3. An object looking like a VoiceBox will appear on the map. Pick it up.
+4. Check the console. It should say "The game has been upgraded to ScrN Balance".
+5. Save the game to a new slot. The new save game(-s) will load ScrN Balance automatically.
+6. Enjoy the game!
+
+> **WARNING!** Upraged save files cannot be downgraded! It is recommended to backup the original save files before upgrading.
+
 
 # Weapons
 ## Dispersion Pistol
